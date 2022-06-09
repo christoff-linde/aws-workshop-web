@@ -1,0 +1,22 @@
+{
+  "resourceName": "s3806ffe8b",
+  "policyUUID": "806ffe8b",
+  "bucketName": "awsworkshopweb46b3522cb2d944cf8eb11519b8f295a3",
+  "storageAccess": "auth",
+  "guestAccess": ["CREATE_AND_UPDATE", "READ", "DELETE"],
+  "authAccess": ["CREATE_AND_UPDATE", "READ", "DELETE"],
+  "groupAccess": {},
+  "adminTriggerFunction": {
+    "tag": "adminTriggerFunction",
+    "category": "predictions",
+    "permissions": ["CREATE_AND_UPDATE", "READ", "DELETE"],
+    "triggerFunction": "RekognitionIndexFacesTrigger5c7cff5b",
+    "triggerEvents": ["s3:ObjectCreated:*", "s3:ObjectRemoved:*"],
+    "triggerPrefix": [
+      {
+        "prefix": "protected/predictions/index-faces/",
+        "prefixTransform": "NONE"
+      }
+    ]
+  }
+}
