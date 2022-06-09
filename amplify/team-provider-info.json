@@ -1,0 +1,27 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-awsworkshopweb-dev-121114-authRole",
+      "UnauthRoleArn": "arn:aws:iam::780176610611:role/amplify-awsworkshopweb-dev-121114-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::780176610611:role/amplify-awsworkshopweb-dev-121114-authRole",
+      "Region": "eu-west-1",
+      "DeploymentBucketName": "amplify-awsworkshopweb-dev-121114-deployment",
+      "UnauthRoleName": "amplify-awsworkshopweb-dev-121114-unauthRole",
+      "StackName": "amplify-awsworkshopweb-dev-121114",
+      "StackId": "arn:aws:cloudformation:eu-west-1:780176610611:stack/amplify-awsworkshopweb-dev-121114/8134b820-e7dc-11ec-ac34-0aca278365c9",
+      "AmplifyAppId": "d1p7otsb7qhvcg"
+    },
+    "categories": {
+      "auth": {
+        "awsworkshopwebf9a1aabe": {},
+        "true": {}
+      },
+      "function": {
+        "RekognitionIndexFacesTrigger5c7cff5b": {
+          "deploymentBucketName": "amplify-awsworkshopweb-dev-121114-deployment",
+          "s3Key": "amplify-builds/RekognitionIndexFacesTrigger5c7cff5b-704f4375654853763047-build.zip"
+        }
+      }
+    }
+  }
+}

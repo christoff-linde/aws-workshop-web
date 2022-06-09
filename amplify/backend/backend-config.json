@@ -1,0 +1,61 @@
+{
+  "auth": {
+    "awsworkshopwebf9a1aabe": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": ["EMAIL"],
+        "signupAttributes": ["EMAIL"],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": ["SMS"],
+        "verificationMechanisms": ["EMAIL"]
+      }
+    }
+  },
+  "predictions": {
+    "identifyEntities1f7625d5": {
+      "providerPlugin": "awscloudformation",
+      "service": "Rekognition",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "RekognitionIndexFacesTrigger5c7cff5b",
+          "attributes": ["Name", "Arn", "LambdaExecutionRole"]
+        },
+        {
+          "category": "storage",
+          "resourceName": "s3806ffe8b",
+          "attributes": ["BucketName"]
+        }
+      ],
+      "identifyType": "identifyEntities"
+    }
+  },
+  "storage": {
+    "s3806ffe8b": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "RekognitionIndexFacesTrigger5c7cff5b",
+          "attributes": ["Name", "Arn", "LambdaExecutionRole"]
+        }
+      ]
+    }
+  },
+  "function": {
+    "RekognitionIndexFacesTrigger5c7cff5b": {
+      "service": "Lambda",
+      "providerPlugin": "awscloudformation",
+      "build": true
+    }
+  }
+}
