@@ -19,6 +19,7 @@
     "lint": "eslint \"**/*.{js,jsx,ts,tsx,json,md,scss,css}\""
   },
   "dependencies": {
+    "@aws-amplify/ui-react": "^2.19.1",
     "@headlessui/react": "^1.6.4",
     "@heroicons/react": "^1.0.6",
     "@mdx-js/mdx": "v1",
