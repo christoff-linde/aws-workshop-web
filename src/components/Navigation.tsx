@@ -5,7 +5,7 @@ import React from "react"
 const Pages = [
   { name: "Home", path: "/" },
   { name: "Facial Recognition", path: "/facial-recognition" },
-  { name: "404", path: "/404" },
+  { name: "Chat", path: "/chat" },
 ]
 
 const Navigation: React.FC = () => {
