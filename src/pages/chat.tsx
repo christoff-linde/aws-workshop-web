@@ -3,8 +3,8 @@ import { AmplifyChatbot } from "@aws-amplify/ui-react/legacy"
 
 const Chat = () => (
   <AmplifyChatbot
-    botName="ScheduleAppointment_dev"
-    botTitle="Schedule Appointment"
+    botName="BookTrip_dev"
+    botTitle="Book a Car"
     welcomeMessage="Hello, how can I help you?"
   />
 )
