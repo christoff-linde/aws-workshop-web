@@ -57,5 +57,12 @@
       "providerPlugin": "awscloudformation",
       "build": true
     }
+  },
+  "interactions": {
+    "lex014080e1": {
+      "service": "Lex",
+      "providerPlugin": "awscloudformation",
+      "build": true
+    }
   }
 }

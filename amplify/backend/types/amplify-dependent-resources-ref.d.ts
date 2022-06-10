@@ -32,4 +32,11 @@ export type AmplifyDependentResourcesAttributes = {
       LambdaExecutionRole: "string"
     }
   }
+  interactions: {
+    lex014080e1: {
+      Region: "string"
+      BotName: "string"
+      FunctionArn: "string"
+    }
+  }
 }

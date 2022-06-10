@@ -19,7 +19,13 @@
       "function": {
         "RekognitionIndexFacesTrigger5c7cff5b": {
           "deploymentBucketName": "amplify-awsworkshopweb-dev-121114-deployment",
-          "s3Key": "amplify-builds/RekognitionIndexFacesTrigger5c7cff5b-704f4375654853763047-build.zip"
+          "s3Key": "amplify-builds/RekognitionIndexFacesTrigger5c7cff5b-7a7838364878624e706f-build.zip"
+        }
+      },
+      "interactions": {
+        "lex014080e1": {
+          "deploymentBucketName": "amplify-awsworkshopweb-dev-121114-deployment",
+          "s3Key": "amplify-builds/lex014080e1-4835716b413145424550-build.zip"
         }
       }
     }

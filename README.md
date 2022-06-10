@@ -100,3 +100,4 @@ The full project should now be setup.
 [TailwindCSS Setup](https://tailwindcss.com/docs/installation)
 [Celebrity Face ID Setup](https://docs.amplify.aws/lib/predictions/identify-entity/q/platform/js/#advanced-configuration)
 [Chatbot Setup](https://docs.amplify.aws/lib/interactions/getting-started/q/platform/js/)
+
