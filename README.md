@@ -97,7 +97,10 @@ The full project should now be setup.
 ### Additional Links
 
 [GatsbyJS Installation](https://www.gatsbyjs.com/docs/tutorial/part-0/#installation-guide)
+
 [TailwindCSS Setup](https://tailwindcss.com/docs/installation)
+
 [Celebrity Face ID Setup](https://docs.amplify.aws/lib/predictions/identify-entity/q/platform/js/#advanced-configuration)
+
 [Chatbot Setup](https://docs.amplify.aws/lib/interactions/getting-started/q/platform/js/)
 
