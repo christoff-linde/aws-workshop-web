@@ -58,11 +58,5 @@
       "build": true
     }
   },
-  "interactions": {
-    "lexf1673f8a": {
-      "service": "Lex",
-      "providerPlugin": "awscloudformation",
-      "build": true
-    }
-  }
+  "interactions": {}
 }
