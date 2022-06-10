@@ -1,54 +1,102 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal TypeScript starter
-</h1>
+## IMY772 AWS Mini Workshpp
 
-## 🚀 Quick start
+_Christoff Linde, 18163841_
 
-1.  **Create a Gatsby site.**
+### Using The Site
 
-    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
+#### Face Detection
 
-    ```shell
-    # create a new Gatsby site using the minimal TypeScript starter
-    npm init gatsby
-    ```
+Any image containing one or more celebrities can be uploaded. The image will be analyzed and the celebrities will be detected, with the names of the detected celebrities being displayed.
 
-2.  **Start developing.**
+### Chatbot
 
-    Navigate into your new site’s directory and start it up.
+The chatbot can either be used to book a car or a hotel room.
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+### Tech Stack
 
-3.  **Open the code and start customizing!**
+| Tech                                                                         | Use                                         |
+| ---------------------------------------------------------------------------- | ------------------------------------------- |
+| [GatsbyJS](https://www.gatsbyjs.org/)                                        | Frontend framework built on React           |
+| [TailwindCSS](https://tailwindcss.com/)                                      | Styling framework                           |
+| [Amplify UI](https://ui.docs.amplify.aws/react/getting-started/installation) | Frontend styling for AWS                    |
+| [AWS Amplify](https://aws.amazon.com/amplify/)                               | Hosting the backend and frontend using AWS  |
+| [AWS IAM](https://aws.amazon.com/iam/)                                       | Setting up users and roles                  |
+| [AWS Lex](https://aws.amazon.com/lex/)                                       | Setting up the chatbot                      |
+| [AWS Rekognition](https://aws.amazon.com/rekognition/)                       | Service for detecting celebrities in images |
 
-    Your site is now running at http://localhost:8000!
+### Project Setup
 
-    Edit `src/pages/index.tsx` to see your site update in real-time!
+#### The Frontend
 
-4.  **Learn more**
+The front-end is built using GatsbyJS and TailwindCSS.
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+To create a new gatsby project, the `gatsby-cli` is needs to be installed.
 
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+The `gatsby-cli` can be installed with the following command:
 
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+```bash
+npm install -g gatsby-cli
+```
 
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+Additional prerequisites includes `Git`, `Node`, and `npm`.
 
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+After installing the `gatsby-cli`, the following command can be used to create a new gatsby project:
 
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+```bash
+npm init gatsby
+```
 
-## 🚀 Quick start (Gatsby Cloud)
+When promted, choose to use Typescript with the project. Default commands are suitable for the other options.
 
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
+#### Amplify
 
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
+- need to create an account
+
+Before hosting can be added, you need to create a AWS Console account. After sigining as the root user, it is best practice to make a IAM user for the project.
+
+The IAM user needs to have to relevant permissions to create, access, and provision the necesary resources for the project. Some of the permissions includes:
+
+- IAM
+- AmazonS3
+- AWSLambda
+- AmazonLex
+- AdministratorAccess-Amplify
+
+##### Setup Hosting
+
+For hosting, AWS Amplify will be used. Amplify will host the frontend web app, as well as the required backend resources.
+
+The frontend code is hosted in a GitHub repo which is linked to Amplify. On successfully linking the repo, the site will be built and deployed to a specific URL.
+
+#### The Backend
+
+To provision and create the backend resources, amplify needs to be configured from the CLI with the following command:
+
+```bash
+amplify configure
+```
+
+After the above command has completed successfully, the following commands will add the necessary resources to the project:
+
+```bash
+amplify add auth
+amplify add interactions
+amplify add predictions
+```
+
+This will add Auth (Cognito), Interactions (Amazon Lex), and Predictions (AWS Rekognition) to the project. The resources will be added locally, and will need to be updated in the cloud.
+
+This can be done with:
+
+```bash
+amplify push
+```
+
+The full project should now be setup.
+
+### Additional Links
+
+[GatsbyJS Installation](https://www.gatsbyjs.com/docs/tutorial/part-0/#installation-guide)
+[TailwindCSS Setup](https://tailwindcss.com/docs/installation)
+[Celebrity Face ID Setup](https://docs.amplify.aws/lib/predictions/identify-entity/q/platform/js/#advanced-configuration)
+[Chatbot Setup](https://docs.amplify.aws/lib/interactions/getting-started/q/platform/js/)
