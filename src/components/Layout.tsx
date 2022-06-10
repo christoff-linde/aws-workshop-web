@@ -8,8 +8,8 @@ interface Props {
 const Layout: React.FC<Props> = ({ children }: Props) => {
   return (
     <>
-      <Navigation />
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4">
+        <Navigation />
         <main>{children}</main>
       </div>
     </>
